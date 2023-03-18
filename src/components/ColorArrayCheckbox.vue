@@ -59,7 +59,7 @@ const checked = computed({
     "
     :class="[
       disabled ? 'cursor-default' : 'cursor-pointer',
-      checked ? 'bg-sky-400 hover:bg-sky-200' : 'bg-slate-200 hover:bg-sky-100',
+      checked ? 'bg-sky-400 hover:bg-sky-300' : 'bg-slate-200 hover:bg-sky-100',
     ]"
   >
     <input
