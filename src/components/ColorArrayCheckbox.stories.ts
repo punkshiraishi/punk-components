@@ -13,7 +13,13 @@ const meta: Meta<typeof ColorArrayCheckbox> = {
       return { args, items }
     },
     template: `
-      <ColorArrayCheckbox color="#FFD600" v-model="items" :item="1" label="test" />
+      <div class="p-3">
+        <ColorArrayCheckbox
+          v-model="items"
+          :item="1"
+          label="Click Me!"
+        />
+      </div>
     `,
   }),
   parameters: {
@@ -25,7 +31,4 @@ const meta: Meta<typeof ColorArrayCheckbox> = {
 export default meta
 type Story = StoryObj<typeof ColorArrayCheckbox>
 
-export const Basic: Story = {
-  args: {
-  },
-}
+export const Basic: Story = {}
