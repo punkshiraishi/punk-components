@@ -28,14 +28,6 @@ const props = defineProps({
   },
 
   /**
-   * 背景色
-   */
-  color: {
-    type: String,
-    default: 'rgb(0, 0, 0, 0)',
-  },
-
-  /**
    * 非活性化どうか
    */
   disabled: {
@@ -44,7 +36,7 @@ const props = defineProps({
   },
 })
 
-const emit = defineEmits(['update:modelValue', 'check', 'uncheck'])
+const emit = defineEmits(['update:modelValue'])
 
 const checked = computed({
   get() {
@@ -56,38 +48,25 @@ const checked = computed({
       : props.modelValue.filter(item => item !== props.item))
   },
 })
-
-function onInput(event: Event) {
-  if (!(event.target instanceof HTMLInputElement))
-    return
-
-  if (event.target.checked)
-    emit('check')
-
-  else
-    emit('uncheck')
-}
 </script>
 
 <template>
   <label
     class="
-      p-2 text-center transition
+      p-2 text-center
       focus-within:outline-dotted focus-within:outline-slate-500
       focus-within:outline-2 focus-within:outline-offset-2
     "
     :class="[
-      disabled ? 'cursor-default' : 'cursor-pointer hover:bg-slate-100',
-      checked && 'bg-slate-300',
+      disabled ? 'cursor-default' : 'cursor-pointer',
+      checked ? 'bg-sky-400 hover:bg-sky-200' : 'bg-slate-200 hover:bg-sky-100',
     ]"
-    :style="{ background: checked && !disabled ? color : '' }"
   >
     <input
       v-model="checked"
       class="opacity-0 w-0"
       type="checkbox"
       :disabled="disabled"
-      @input="onInput"
     >
     <span>
       {{ label }}
