@@ -14,11 +14,24 @@ const meta: Meta<typeof ColorArrayCheckbox> = {
     },
     template: `
       <div class="p-3">
-        <ColorArrayCheckbox
-          v-model="items"
-          :item="1"
-          label="Click Me!"
-        />
+        <div class="flex flex-row space-x-3">
+          <ColorArrayCheckbox
+            v-model="items"
+            item="apple"
+            label="apple"
+          />
+          <ColorArrayCheckbox
+            v-model="items"
+            item="orange"
+            label="orange"
+          />
+          <ColorArrayCheckbox
+            v-model="items"
+            item="banana"
+            label="banana"
+          />
+        </div>
+        {{ items }}
       </div>
     `,
   }),
