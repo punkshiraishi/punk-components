@@ -1,1 +1,1 @@
-{"v":4,"entries":{}}
+{"v":4,"entries":{"arraycheckablelabel--docs":{"id":"arraycheckablelabel--docs","title":"ArrayCheckableLabel","name":"Docs","importPath":"./src/components/ArrayCheckableLabel.stories.ts","type":"docs","tags":["autodocs","docs"],"storiesImports":[]},"arraycheckablelabel--basic":{"id":"arraycheckablelabel--basic","title":"ArrayCheckableLabel","name":"Basic","importPath":"./src/components/ArrayCheckableLabel.stories.ts","tags":["autodocs","story"],"type":"story"}}}
