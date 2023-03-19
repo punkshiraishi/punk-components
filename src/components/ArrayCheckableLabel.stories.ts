@@ -1,13 +1,13 @@
 import { ref } from 'vue'
 import type { Meta, StoryObj } from '@storybook/vue3'
 
-import ColorArrayCheckbox from './ColorArrayCheckbox.vue'
+import ArrayCheckableLabel from './ArrayCheckableLabel.vue'
 
-const meta: Meta<typeof ColorArrayCheckbox> = {
-  title: 'ColorArrayCheckbox',
-  component: ColorArrayCheckbox,
+const meta: Meta<typeof ArrayCheckableLabel> = {
+  title: 'ArrayCheckableLabel',
+  component: ArrayCheckableLabel,
   render: (args: any) => ({
-    components: { ColorArrayCheckbox },
+    components: { ArrayCheckableLabel },
     setup() {
       const items = ref([])
       return { args, items }
@@ -15,17 +15,17 @@ const meta: Meta<typeof ColorArrayCheckbox> = {
     template: `
       <div class="p-3">
         <div class="flex flex-row space-x-3">
-          <ColorArrayCheckbox
+          <ArrayCheckableLabel
             v-model="items"
             item="apple"
             label="apple"
           />
-          <ColorArrayCheckbox
+          <ArrayCheckableLabel
             v-model="items"
             item="orange"
             label="orange"
           />
-          <ColorArrayCheckbox
+          <ArrayCheckableLabel
             v-model="items"
             item="banana"
             label="banana"
@@ -42,6 +42,6 @@ const meta: Meta<typeof ColorArrayCheckbox> = {
 }
 
 export default meta
-type Story = StoryObj<typeof ColorArrayCheckbox>
+type Story = StoryObj<typeof ArrayCheckableLabel>
 
 export const Basic: Story = {}
